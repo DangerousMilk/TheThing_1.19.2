@@ -15,7 +15,7 @@ public class ModItems {
     public static final RegistryObject<Item> PIZZA = ITEMS.register("pizza",
             () -> new Item(new Item.Properties().food(ModFoods.PIZZA).tab(ModCreativeModeTab.THETHING_TAB)));
     public static final RegistryObject<Item> CAN_OPENER = ITEMS.register("canopener",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.THETHING_TAB).defaultDurability(10)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.THETHING_TAB).defaultDurability(50)));
     public static final RegistryObject<Item> CANNED_MEAT = ITEMS.register("cannedmeat",
             () -> new CannedFoodItem(new Item.Properties().food(ModFoods.CANNED_MEAT).tab(ModCreativeModeTab.THETHING_TAB)));
 
