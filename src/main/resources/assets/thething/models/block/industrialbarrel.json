@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "thething:block/industrialbarrel_bottom",
+    "side": "thething:block/industrialbarrel_side",
+    "top": "thething:block/industrialbarrel_top"
+  }
+}

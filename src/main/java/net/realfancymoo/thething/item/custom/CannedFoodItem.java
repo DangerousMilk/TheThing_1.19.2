@@ -20,7 +20,7 @@ public class CannedFoodItem extends Item {
     @Override
     public int getUseDuration(ItemStack itemStack) {
         if (itemStack.getItem().isEdible()) {
-            return 80;
+            return 100;
         } else {
             return 0;
         }

@@ -2,5 +2,6 @@
   "item.thething.pizza": "Pizza",
   "item.thething.cannedmeat": "Canned Meat",
   "item.thething.canopener": "Can Opener",
-  "itemGroup.thethingtab": "The Thing"
+  "itemGroup.thethingtab": "The Thing",
+  "block.thething.industrialbarrel": "Industrial Barrel"
 }
