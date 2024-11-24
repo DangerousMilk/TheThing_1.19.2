@@ -12,6 +12,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.realfancymoo.thething.block.ModBlocks;
+import net.realfancymoo.thething.block.entity.ModBlockEntities;
 import net.realfancymoo.thething.item.ModItems;
 import org.slf4j.Logger;
 
@@ -28,6 +29,7 @@ public class TheThing
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
