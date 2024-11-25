@@ -1,3 +1,4 @@
+/*
 package net.realfancymoo.thething.menus;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -37,3 +38,5 @@ public class IndustrialBarrelScreen extends AbstractContainerScreen<IndustrialBa
         this.renderTooltip(pPoseStack, pMouseX, pMouseY);
     }
 }
+
+ */

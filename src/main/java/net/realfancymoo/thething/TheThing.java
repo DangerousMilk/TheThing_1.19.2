@@ -16,7 +16,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.realfancymoo.thething.block.ModBlocks;
 import net.realfancymoo.thething.block.entity.ModBlockEntities;
 import net.realfancymoo.thething.item.ModItems;
-import net.realfancymoo.thething.menus.IndustrialBarrelScreen;
+//import net.realfancymoo.thething.menus.IndustrialBarrelScreen;
 import net.realfancymoo.thething.menus.ModMenus;
 import org.slf4j.Logger;
 
@@ -53,7 +53,7 @@ public class TheThing
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            MenuScreens.register(ModMenus.INDUSTRIAL_BARREL_MENU.get(), IndustrialBarrelScreen::new);
+            //MenuScreens.register(ModMenus.INDUSTRIAL_BARREL_MENU.get(), IndustrialBarrelScreen::new);
         }
     }
 }

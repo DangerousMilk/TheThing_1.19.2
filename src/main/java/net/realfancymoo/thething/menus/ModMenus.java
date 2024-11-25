@@ -11,8 +11,8 @@ public class ModMenus {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(ForgeRegistries.MENU_TYPES, TheThing.MOD_ID);
 
-    public static final RegistryObject<MenuType<IndustrialBarrelMenu>> INDUSTRIAL_BARREL_MENU = MENUS.register("industrialbarrelmenu",
-            ()->new MenuType(IndustrialBarrelMenu::new));
+     //public static final RegistryObject<MenuType<IndustrialBarrelMenu>> INDUSTRIAL_BARREL_MENU = MENUS.register("industrialbarrelmenu",
+            //()->new MenuType(IndustrialBarrelMenu::new));
 
     public static void register(IEventBus eventBus){
         MENUS.register(eventBus);

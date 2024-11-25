@@ -1,3 +1,4 @@
+/*
 package net.realfancymoo.thething.menus;
 
 import net.minecraft.core.BlockPos;
@@ -22,51 +23,26 @@ public class IndustrialBarrelMenu extends AbstractContainerMenu {
     public IndustrialBarrelMenu(int containerID, Inventory playerInventory, Container container)
     {
         super(ModMenus.INDUSTRIAL_BARREL_MENU.get(), containerID);
-        checkContainerSize(container, 54);
+        checkContainerSize(container, this.containerRows * 9);
         this.container = container;
+        container.startOpen(playerInventory.player);
+        int $$5 = (this.containerRows - 4) * 18;
 
-        //int $$5 = (this.containerRows - 4) * 18;
-
-        for(int $$5 = 0; $$5 < 3; ++$$5) {
-            for(int $$6 = 0; $$6 < 9; ++$$6) {
-                this.addSlot(new ShulkerBoxSlot(container, $$6 + $$5 * 9, 8 + $$6 * 18, 18 + $$5 * 18));
-            }
-        }
-
-        for(int $$7 = 0; $$7 < 3; ++$$7) {
-            for(int $$8 = 0; $$8 < 9; ++$$8) {
-                this.addSlot(new Slot(playerInventory, $$8 + $$7 * 9 + 9, 8 + $$8 * 18, 84 + $$7 * 18));
-            }
-        }
-
-        for(int $$9 = 0; $$9 < 9; ++$$9) {
-            this.addSlot(new Slot(playerInventory, $$9, 8 + $$9 * 18, 142));
-        }
-
-        /*
-        for(int i = 0; i < 6; ++i) {
+        for(int i = 0; i < this.containerRows; ++i) {
             for(int j = 0; j < 9; ++j) {
                 this.addSlot(new Slot(container, j + i * 9, 8 + j * 18, 18 + i * 18));
             }
         }
 
-        // Player Inventory
-        for(int i = 0; i < 3; ++i) {
-            for(int j = 0; j < 9; ++j) {
-                this.addSlot(new Slot(playerInventory, j + i * 9 + 9, 8 + j * 18, 103 + i * 18 + $$5));
+        for(int k = 0; k < 3; ++k) {
+            for(int h = 0; h < 9; ++h) {
+                this.addSlot(new Slot(playerInventory, h + k * 9 + 9, 8 + h * 18, 103 + k * 18 + $$5));
             }
         }
 
-        // Player Hotbar
-        for(int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 161 + $$5));
+        for(int t = 0; t < 9; ++t) {
+            this.addSlot(new Slot(playerInventory, t, 8 + t * 18, 161 + $$5));
         }
-
-         */
-    }
-
-    public IndustrialBarrelMenu(int containerId, Inventory playerInv) {
-        super(ModMenus.INDUSTRIAL_BARREL_MENU.get(), containerId);
     }
 
     @Override
@@ -103,3 +79,5 @@ public class IndustrialBarrelMenu extends AbstractContainerMenu {
         super.removed(pPlayer);
     }
 }
+
+ */
