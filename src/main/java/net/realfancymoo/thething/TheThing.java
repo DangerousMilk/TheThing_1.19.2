@@ -2,6 +2,7 @@ package net.realfancymoo.thething;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
@@ -15,10 +16,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.realfancymoo.thething.block.ModBlocks;
 import net.realfancymoo.thething.block.entity.ModBlockEntities;
+import net.realfancymoo.thething.entity.ModEntityTypes;
+import net.realfancymoo.thething.entity.client.ParasiteRenderer;
 import net.realfancymoo.thething.item.ModItems;
 //import net.realfancymoo.thething.menus.IndustrialBarrelScreen;
 import net.realfancymoo.thething.menus.ModMenus;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TheThing.MOD_ID)
@@ -35,6 +39,9 @@ public class TheThing
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenus.register(modEventBus);
+        ModEntityTypes.register(modEventBus);
+
+        GeckoLib.initialize();
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -53,6 +60,7 @@ public class TheThing
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntityTypes.PARASITE.get(), ParasiteRenderer::new);
             //MenuScreens.register(ModMenus.INDUSTRIAL_BARREL_MENU.get(), IndustrialBarrelScreen::new);
         }
     }
