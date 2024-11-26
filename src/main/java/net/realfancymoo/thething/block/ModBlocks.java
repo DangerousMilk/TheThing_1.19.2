@@ -24,7 +24,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> INDUSTRIAL_BARREL = registerBlock("industrialbarrel",
             () ->new IndustrialBarrelBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.THETHING_TAB);
+                    .strength(1f)), ModCreativeModeTab.THETHING_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
