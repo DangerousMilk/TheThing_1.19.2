@@ -16,7 +16,7 @@ public class ModEntityTypes {
 
     public static final RegistryObject<EntityType<ParasiteEntity>> PARASITE = ENTITY_TYPES.register("parasite",
             () -> EntityType.Builder.of(ParasiteEntity::new, MobCategory.MONSTER)
-                    .sized(0.4f, 15f)
+                    .sized(0.65f, 0.55f)
                     .build(new ResourceLocation(TheThing.MOD_ID, "parasite").toString()));
 
     public static void register(IEventBus bus){

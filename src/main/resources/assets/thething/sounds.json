@@ -1,0 +1,17 @@
+{
+  "parasite_death": {
+    "subtitle": "sounds.thething.parasite_death",
+    "sounds": [
+      "thething:parasite_death"
+    ]
+  },
+  "parasite_ambient": {
+    "subtitle": "sounds.thething.parasite_ambient",
+    "sounds": [
+      "thething:parasite_ambient_00",
+      "thething:parasite_ambient_01",
+      "thething:parasite_ambient_02",
+      "thething:parasite_ambient_03"
+    ]
+  }
+}

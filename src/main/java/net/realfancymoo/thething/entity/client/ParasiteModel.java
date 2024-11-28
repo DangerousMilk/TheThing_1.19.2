@@ -9,7 +9,7 @@ public class ParasiteModel extends AnimatedGeoModel<ParasiteEntity> {
 
     @Override
     public ResourceLocation getModelResource(ParasiteEntity parasiteEntity) {
-        return new ResourceLocation(TheThing.MOD_ID, "geo/parasite.geo.json");
+        return new ResourceLocation(TheThing.MOD_ID, "geo/parasitegeo.json");
     }
 
     @Override
@@ -19,6 +19,6 @@ public class ParasiteModel extends AnimatedGeoModel<ParasiteEntity> {
 
     @Override
     public ResourceLocation getAnimationResource(ParasiteEntity parasiteEntity) {
-        return new ResourceLocation(TheThing.MOD_ID, "animations/parasite.animation.json");
+        return new ResourceLocation(TheThing.MOD_ID, "animations/parasiteanimation.json");
     }
 }

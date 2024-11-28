@@ -16,11 +16,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.realfancymoo.thething.block.ModBlocks;
 import net.realfancymoo.thething.block.entity.ModBlockEntities;
+import net.realfancymoo.thething.effect.ModEffects;
 import net.realfancymoo.thething.entity.ModEntityTypes;
 import net.realfancymoo.thething.entity.client.ParasiteRenderer;
 import net.realfancymoo.thething.item.ModItems;
-//import net.realfancymoo.thething.menus.IndustrialBarrelScreen;
 import net.realfancymoo.thething.menus.ModMenus;
+import net.realfancymoo.thething.sound.ModSounds;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
@@ -30,6 +31,7 @@ public class TheThing
 {
     public static final String MOD_ID = "thething";
     private static final Logger LOGGER = LogUtils.getLogger();
+    public static final HiveMind hiveMindSingleton = new HiveMind();
 
     public TheThing()
     {
@@ -40,6 +42,8 @@ public class TheThing
         ModBlockEntities.register(modEventBus);
         ModMenus.register(modEventBus);
         ModEntityTypes.register(modEventBus);
+        ModEffects.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         GeckoLib.initialize();
 
