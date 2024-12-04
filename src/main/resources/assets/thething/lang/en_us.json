@@ -4,5 +4,19 @@
   "item.thething.canopener": "Can Opener",
   "itemGroup.thethingtab": "The Thing",
   "block.thething.industrialbarrel": "Industrial Barrel",
-  "container.industrialbarrel": "Industrial Barrel"
+  "container.industrialbarrel": "Industrial Barrel",
+  "item.thething.infested_porkchop": "Raw Porkchop",
+  "item.thething.infested_cooked_porkchop": "Cooked Porkchop",
+  "item.thething.infested_beef": "Raw Beef",
+  "item.thething.infested_cooked_beef": "Steak",
+  "item.thething.infested_chicken": "Raw Chicken",
+  "item.thething.infested_cooked_chicken": "Cooked Chicken",
+  "item.thething.infested_mutton": "Raw Mutton",
+  "item.thething.infested_cooked_mutton": "Cooked Mutton",
+  "item.thething.infested_rabbit": "Raw Rabbit",
+  "item.thething.infested_cooked_rabbit": "Cooked Rabbit",
+  "item.thething.infested_cod": "Raw Cod",
+  "item.thething.infested_cooked_cod": "Cooked Cod",
+  "item.thething.infested_salmon": "Raw Salmon",
+  "item.thething.infested_cooked_salmon": "Cooked Salmon"
 }

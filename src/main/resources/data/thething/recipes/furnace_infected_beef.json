@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "thething:infested_beef"
+  },
+  "result": "thething:infested_cooked_beef"
+}

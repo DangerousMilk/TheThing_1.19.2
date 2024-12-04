@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "nnn",
+    "mmm",
+    "nnn"
+  ],
+  "key": {
+    "m":[
+      {
+        "item": "thething:infested_cooked_porkchop"
+      },
+      {
+        "item": "thething:infested_cooked_beef"
+      },
+      {
+        "item": "thething:infested_cooked_mutton"
+      },
+      {
+        "item": "thething:infested_cooked_chicken"
+      }
+    ],
+    "n": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "thething:infested_canned_meat"
+  }
+}

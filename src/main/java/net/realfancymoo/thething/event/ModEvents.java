@@ -1,6 +1,7 @@
 package net.realfancymoo.thething.event;
 
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,6 +14,7 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.server.ServerStartedEvent;
 import net.minecraftforge.event.server.ServerStoppedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -27,6 +29,22 @@ public class ModEvents {
     @Mod.EventBusSubscriber(modid = TheThing.MOD_ID)
     public static class ForgeEvents
     {
+        @SubscribeEvent
+        public void crafted(PlayerEvent.ItemSmeltedEvent event)
+        {
+            if(event.getEntity().getLevel().isClientSide()){return;}
+
+            var ingredient = event.getSmelting();
+            var result = event.getResult();
+
+            // Check if ingredient was infected
+            if(ingredient.getTag() != null && ingredient.getTag().getBoolean("infected"))
+            {
+                //CompoundTag nbt = result.getOrCreateTag();
+                //nbt.putString("infected", "true");
+            }
+        }
+
         @SubscribeEvent
         public static void onItemUse(LivingEntityUseItemEvent.Finish event) {
             // Return if client side
@@ -45,6 +63,12 @@ public class ModEvents {
                     }
                 }
             }
+        }
+
+        @SubscribeEvent
+        public static void smelt(PlayerEvent.ItemSmeltedEvent event)
+        {
+            System.out.println(event.getSmelting());
         }
 
         @SubscribeEvent
